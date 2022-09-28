@@ -568,8 +568,13 @@ ul {
     color: #FFFFFF;
 }
 
-.contour:hover .work-subtext {
-    transform: translateY(0);   
+.contour-link {
+    text-decoration: none;
+}
+
+.contour-link:hover .work-subtext,
+.contour-link:focus .work-subtext {
+    transform: translateY(0);
 }
 
 .description {
