@@ -108,6 +108,7 @@ ul {
     font-weight: 500;
     letter-spacing: 0.02em;
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:focus,
@@ -150,6 +151,8 @@ ul {
     letter-spacing: 0.02em;
     text-decoration: none;
     fill: var(--primary-text-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
  .header-link.emale {
@@ -182,6 +185,7 @@ ul {
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo:hover, 
@@ -244,6 +248,17 @@ ul {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+} 
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal {
@@ -252,7 +267,6 @@ ul {
     height: 581px;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
     padding-left: 490px;
     padding-top: 8px;
     
@@ -261,14 +275,17 @@ ul {
     0px 1px 1px rgba(0, 0, 0, 0.14), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-hidden {
+/* .is-hidden {
     pointer-events: none;
-    opacity: 1;
+    
     visibility: hidden;
     
-}
+} */
 
 .modal-close {
     width: 30px;
@@ -403,6 +420,8 @@ ul {
    border-radius: 50%;
    background-color: var(--primary-white-color);
    fill: #AFB1B8;
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link.linkedin {
@@ -477,6 +496,8 @@ ul {
     border-radius: 4px;
     padding: 0;
     margin: 0;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
@@ -502,6 +523,12 @@ ul {
     padding-left: 0;   
 }
 
+.contour {
+    display: block;
+    box-shadow: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .contour:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06), 
@@ -511,14 +538,19 @@ ul {
 .contour-card {
     position: relative;
     display: block;
-    
     overflow: hidden;
+}
+
+.work-card {
+    display: inline-block;
 }
 
 /* Выпадающее меню */
 .work-subtext {
     position: absolute;
     display: block;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     
@@ -536,18 +568,11 @@ ul {
     color: #FFFFFF;
 }
 
-.contour {
-    
-    display: block;
-}
-
 .contour:hover .work-subtext {
-    
     transform: translateY(0);   
 }
 
 .description {
-
     display: block;
     width: 370px;
     height: 110px;
@@ -659,6 +684,10 @@ ul {
     font-family: inherit;
     cursor: pointer;
     text-decoration: none;
+    box-shadow: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter:hover, 
@@ -733,6 +762,7 @@ ul {
 
 .footer-list .link {
     color: #FFFFFF99;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list .link:hover,
@@ -758,6 +788,8 @@ ul {
     height: 44px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link.linkedin {
